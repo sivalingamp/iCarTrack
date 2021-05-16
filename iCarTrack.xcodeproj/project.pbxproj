@@ -47,7 +47,6 @@
 		15FB41A7264D58DA00A0AD68 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB41A3264D58DA00A0AD68 /* LoginViewModel.swift */; };
 		15FB41AA264D590500A0AD68 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB41A9264D590500A0AD68 /* ViewModelType.swift */; };
 		15FB41AC264D593500A0AD68 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FB41AB264D593500A0AD68 /* LoginViewController.xib */; };
-		15FB41AE264D5F3D00A0AD68 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB41AD264D5F3D00A0AD68 /* GradientView.swift */; };
 		15FB41B1264D602C00A0AD68 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB41B0264D602C00A0AD68 /* Application.swift */; };
 		15FB41D9264FD4E000A0AD68 /* DataPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FB41D0264FD4DF00A0AD68 /* DataPlatform.framework */; };
 		15FB41E0264FD4E000A0AD68 /* DataPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB41DF264FD4E000A0AD68 /* DataPlatformTests.swift */; };
@@ -201,7 +200,6 @@
 		15FB41A3264D58DA00A0AD68 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		15FB41A9264D590500A0AD68 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		15FB41AB264D593500A0AD68 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		15FB41AD264D5F3D00A0AD68 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		15FB41B0264D602C00A0AD68 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		15FB41D0264FD4DF00A0AD68 /* DataPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FB41D2264FD4DF00A0AD68 /* DataPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPlatform.h; sourceTree = "<group>"; };
@@ -358,7 +356,6 @@
 		151018442650CAC300548D5D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				15FB41AD264D5F3D00A0AD68 /* GradientView.swift */,
 				15FB41A9264D590500A0AD68 /* ViewModelType.swift */,
 				151018452650CACF00548D5D /* ActivityIndicator.swift */,
 				151018462650CACF00548D5D /* ErrorTracker.swift */,
@@ -1140,7 +1137,6 @@
 				15FB40F7264D2D6800A0AD68 /* SceneDelegate.swift in Sources */,
 				15A23B64265145D2002CD258 /* UserDetailViewController.swift in Sources */,
 				15FB41A7264D58DA00A0AD68 /* LoginViewModel.swift in Sources */,
-				15FB41AE264D5F3D00A0AD68 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
