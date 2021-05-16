@@ -14,7 +14,6 @@ protocol AccountRepository: CoreDataRepository {
     func getUser(for username:String, and password:String) -> Observable<Account?>
     func getUser(for username:String) -> Observable<Account?>
     func updateUser(_ user: Account) -> Observable<Void>
-    func getLastActiveUser() -> Observable<Account?>
 }
 
 extension AccountRepository where Self.ModelType == Account, Self.EntityType == CDUser {
@@ -22,11 +21,7 @@ extension AccountRepository where Self.ModelType == Account, Self.EntityType == 
     func getUser(for username:String, and password:String) -> Observable<Account?> {
         return self.item(with: NSPredicate(format: "username == %@ AND password == %@", username, password))
     }
-    
-    func getLastActiveUser() -> Observable<Account?> {
-        return self.item(with: NSPredicate(format: "active == true"))
-    }
-    
+ 
     func getUser(for username:String) -> Observable<Account?> {
         return self.item(with: NSPredicate(format: "username == %@", username))
     }
@@ -38,6 +33,7 @@ extension AccountRepository where Self.ModelType == Account, Self.EntityType == 
     func updateUser(_ user: Account) -> Observable<Void> {
         return self.update(user)
     }
+    
     static func map(from item: Account, to entity: CDUser) {
         entity.userId = item.id
         entity.name = item.name

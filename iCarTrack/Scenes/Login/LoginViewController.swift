@@ -112,6 +112,7 @@ private extension LoginViewController {
             for country in countries {
                 let action =  UIAlertAction(title: country, style: .default) { action in
                     vc.countryBtn.setTitle(action.title, for: .normal)
+                    vc.country.onNext(action.title ?? "")
                 }
                 optionMenu.addAction(action)
             }
