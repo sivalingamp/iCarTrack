@@ -27,7 +27,7 @@ class LoginViewModel: ViewModelType {
             return self.useCase.addAccount(Account(id: 1, name: "Siva", username: "siva", password: "password123")).asDriverOnErrorJustComplete()
         }.mapToVoid()
         
-        let lastActiveAcount = addUserAccount.flatMap { _ in
+        let activeAccount = addUserAccount.flatMap { _ in
             return self.useCase.getActiveAccount().asDriverOnErrorJustComplete()
         }.filter { $0 != nil }
         .do { user in
@@ -60,7 +60,7 @@ class LoginViewModel: ViewModelType {
                 self.router.toMain(userName: user?.username ?? "")
             }
         
-        let proceed = Driver.merge(save, lastActiveAcount)
+        let proceed = Driver.merge(save, activeAccount)
         
         return Output(trigger:addUserAccount, country: countries,
                       rememberMe: rememberMe,
