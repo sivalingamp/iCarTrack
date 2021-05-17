@@ -24,7 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
-        UINavigationBar.setupDefaultStyle()
     }
 
     @available(iOS 13.0, *)

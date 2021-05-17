@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        UINavigationBar.setupDefaultStyle()
+
         return true
     }
     
