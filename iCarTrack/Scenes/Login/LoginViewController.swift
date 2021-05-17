@@ -85,14 +85,7 @@ private extension LoginViewController {
         output.country.drive(countries).disposed(by: disposeBag)
         output.loading.drive(loading).disposed(by: disposeBag)
     }
-    
-    
-    var remeberMe: Binder<Bool> {
-        return Binder(self, binding: { (vc, state) in
-            vc.remeberMeBtn.isSelected = state
-        })
-    }
-    
+  
     var loading: Binder<Bool> {
         return Binder(self, binding: { (vc, state) in
             //show/hide progress bar

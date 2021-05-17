@@ -27,10 +27,10 @@ class LoginViewModel: ViewModelType {
             return self.useCase.addAccount(Account(id: 1, name: "Siva", username: "siva", password: "password123")).asDriverOnErrorJustComplete()
         }.mapToVoid()
         
-        let activeAccount = addUserAccount.flatMap { _ in
+        let activeAccount = addUserAccount.flatMap { [unowned self] _ in
             return self.useCase.getActiveAccount().asDriverOnErrorJustComplete()
         }.filter { $0 != nil }
-        .do { user in
+        .do { [unowned self] user in
             self.router.toMain(userName: user?.username ?? "")
         }
 
@@ -46,7 +46,7 @@ class LoginViewModel: ViewModelType {
             return !$0.0.isEmpty && !$0.1.isEmpty && !$1
         }
         
-        let countries = input.countryTrigger.flatMap {_ in
+        let countries = input.countryTrigger.flatMap { [unowned self] _ in
             return self.useCase.accountLocations().asDriverOnErrorJustComplete()
         }.map { locations -> [String] in
             return locations.map { $0.country }
