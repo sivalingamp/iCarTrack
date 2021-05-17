@@ -42,7 +42,7 @@ struct AccountUseCase: Domain.AccountUseCase, AccountRepository {
     
     func addAccount(_ account: Account) -> Observable<Void> {
         return self.all().flatMap({ accounts -> Observable<Void> in
-            if (accounts.count == 0) { return Observable.just(()) }
+            if (accounts.count > 0) { return Observable.just(()) }
             return self.addUser(account)
         })
     }
